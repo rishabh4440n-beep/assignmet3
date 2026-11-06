@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Layout</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container to match screen look */
+        .portfolio-container {
+            width: 100%;
+            max-width: 800px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Typography & Layout Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d14949; /* Coral/orange accent text color */
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* Skills Cards Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background-color: #0f4cba; /* Royal Blue Background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .skill-card strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Projects Section */
+        .project-box {
+            background-color: #f9f9f9;
+            border: 1px dashed #bbb;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .project-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .project-box p {
+            text-align: center;
+            color: #666;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 500px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            background-color: #fdfdfd;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: #0f4cba;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s ease;
+            align-self: flex-start;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0a3685;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <!-- Header Section -->
+        <header>
+            <h1>Full Stack Developer</h1>
+            <p class="subtitle">Building modern web applications.</p>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello, my name is Rishabh jha, and I am currently learning web development. I have transformed my passion for creating interactive and responsive web pages. I am currently pursuing a B.Tech degree, and I always aim to improve my knowledge in the field of web development with comprehensive skills. My goal is to work as a developer and build creative projects that make a real impact.
+            </p>
+        </section>
+
+        <!-- My Skills Section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>HTML</strong>
+                    <span>Learned</span>
+                </div>
+                <div class="skill-card">
+                    <strong>CSS</strong>
+                    <span>Beginner</span>
+                </div>
+                <div class="skill-card">
+                    <strong>JavaScript</strong>
+                    <span>Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            
+            <div class="project-box">
+                <h3>Project 1</h3>
+                <p>A simple HTML & CSS landing page</p>
+            </div>
+
+            <div class="project-box">
+                <h3>Project 2</h3>
+                <p>Another awesome project details here</p>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
